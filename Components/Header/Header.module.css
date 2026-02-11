@@ -1,0 +1,33 @@
+.headerSection {
+  background: var(--inputs);
+  padding: 24px 0;
+  border-bottom: 1px solid var(--badges);
+  height: 72px;
+}
+
+.headerContainer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  gap: 32px;
+}
+
+.inactive {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--main);
+}
+
+.active {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--button-hover);
+}

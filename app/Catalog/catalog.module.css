@@ -1,0 +1,7 @@
+.catalogSection{
+    padding: 48px 0 52px
+}
+.catalog{
+    display: grid;
+    grid-template-columns: 360px 1fr;
+}

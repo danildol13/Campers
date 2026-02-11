@@ -1,0 +1,44 @@
+/* Sizes */
+.sm {
+  max-width: 576px;
+}
+
+.md {
+  max-width: 768px;
+}
+
+.lg {
+  max-width: 992px;
+}
+
+.xl {
+  max-width: 1200px;
+}
+
+.xxl {
+  max-width: 1400px;
+}
+
+.fluid {
+  width: 100%;
+}
+
+/* Container */
+.container {
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+    padding: 0 64px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    margin: 0 auto;
+    padding: 0 64px;
+  }
+}
