@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import Container from "../Container/Container";
 import css from "./Header.module.css";
@@ -27,8 +27,8 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/Catalog"
-                className={path === "/Catalog" ? css.active : css.inactive}
+                href="/catalog"
+                className={path === "/catalog" ? css.active : css.inactive}
               >
                 Catalog
               </Link>

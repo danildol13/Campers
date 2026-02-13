@@ -1,5 +1,7 @@
+"use client";
 import Container from "@/Components/Container/Container";
 import css from "./catalog.module.css";
+import Filter from "@/Components/Filter/Filter";
 
 export default function Catalog() {
   return (
@@ -7,7 +9,7 @@ export default function Catalog() {
       <Container>
         <div className={css.catalog}>
           <aside>
-            Embrace simplicity and freedom with the Mavericks panel truck...
+            <Filter/>
           </aside>
           <h1>Catalog</h1>
         </div>
