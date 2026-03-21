@@ -34,6 +34,7 @@
   font-size: 24px;
   line-height: 133%;
   color: var(--main);
+  margin-bottom: 28px;
 }
 
 /* gallery */
@@ -41,11 +42,23 @@
 .gallery {
   display: flex;
   gap: 48px;
+  margin-bottom: 28px;
 }
 
 .galleryImage {
+  width: 292px;
+  height: 312px;
   object-fit: cover;
   border-radius: 10px;
+}
+/* description */
+.description {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text);
+  margin-bottom: 60px;
 }
 /* detailsLayout */
 

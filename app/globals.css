@@ -9,8 +9,8 @@
   --button: #e44848;
   --button-hover: #d84343;
   --rating: #ffc531;
-  --ac-padding:16px 40px;
-  --automatic-padding:16px;
+  --ac-padding: 16px 40px;
+  --automatic-padding: 16px;
   --kitchen-padding: 16px 26px;
   --tv-padding: 16px 40px;
   --bathroom-padding: 16px 18px;
@@ -18,12 +18,55 @@
   --fullyIntegrated-padding: 4px 16px;
   --alcove-padding: 16px 30px;
 }
-:root { --font-family: "Inter", sans-serif; }
-* { box-sizing: border-box; font-family: var(--font-family); }
-h1, h2, h3, h4, h5, h6, p { margin: 0; padding: 0; }
-ul, ol { margin: 0; padding: 0; list-style: none; }
-a { text-decoration: none; color: currentColor; }
-input, textarea, select, button { font-family: inherit; font-size: inherit; line-height: inherit; outline: none; border: none; }
-textarea { resize: none; }
-button { cursor: pointer; display: block; color: currentColor; }
-img, picture, svg { display: block; }
+:root {
+  --font-family: "Inter", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: none;
+  border: none;
+}
+textarea {
+  resize: none;
+}
+button {
+  cursor: pointer;
+  display: block;
+  color: currentColor;
+  padding: 0;
+  background: none;
+}
+img,
+picture,
+svg {
+  display: block;
+}

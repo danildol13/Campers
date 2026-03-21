@@ -1,0 +1,25 @@
+.switchButtons {
+  display: flex;
+  gap: 40px;
+  border-bottom: 3px solid var(--gray-light);
+  position: relative;
+}
+
+.featureButton,
+.reviewButton {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main);
+  padding-bottom: 24px;
+}
+
+.activeLine {
+  position: absolute;
+  bottom: -3px;
+  height: 3px;
+  width: 85px;
+  background: var(--button);
+  transition: left 0.3s ease, width 0.3s ease;
+}

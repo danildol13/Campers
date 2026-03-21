@@ -46,7 +46,7 @@ export default async function CatalogDetailsPage({
             />
           ))}
         </div>
-        <p>{data.description}</p>
+        <p className={css.description}>{data.description}</p>
         <div className={css.detailsLayout}>
           <CamperDetails camper={data} />
           <BookingForm />
