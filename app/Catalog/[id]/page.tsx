@@ -14,27 +14,27 @@ export default async function CatalogDetailsPage({
   const data = await getCamperById(id);
 
   return (
-    <section>
+    <section className={css.infoSection}>
       <Container>
-        <p>{data.name}</p>
-        <div>
-          <div>
+        <p className={css.camperName}>{data.name}</p>
+        <div className={css.camperInfos}>
+          <div className={css.leftInfoSide}>
             <svg height={16} width={16}>
               <use href="/allicons.svg#icon-Rating-colored"></use>
             </svg>
             <p>
-              {data.rating}({data.reviews.length})
+              {data.rating}({data.reviews.length} Reviews)
             </p>
           </div>
-          <div>
+          <div className={css.rightInfoSide}>
             <svg width={16} height={16}>
               <use href="/allicons.svg#icon-Map"></use>
             </svg>
             {data.location}
           </div>
-          <p>€{data.price.toFixed(2)}</p>
         </div>
-        <div>
+        <p className={css.camperPrice}>€{data.price.toFixed(2)}</p>
+        <div className={css.gallery}>
           {data.gallery.map((photo, index) => (
             <Image
               key={index}
@@ -42,6 +42,7 @@ export default async function CatalogDetailsPage({
               alt={data.name}
               width={292}
               height={312}
+              className={css.galleryImage}
             />
           ))}
         </div>
