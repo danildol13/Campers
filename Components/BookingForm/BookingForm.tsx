@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 export default function BookingForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast.success("Booking confirmed");
+    toast.success("Booking confirmed!");
   };
   return (
     <form onSubmit={handleSubmit}>

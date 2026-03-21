@@ -1,5 +1,6 @@
+import { mockApi } from "@/app/api/externalApi";
 import api from "../lib/api";
-import { Filters } from "../types/camper";
+import { Filters, Infos } from "../types/camper";
 
 type GetCampersParams = Filters & {
   page: number;
@@ -39,3 +40,9 @@ export const getCampers = async (
 
   return data;
 };
+
+
+export const getCamperById = async (id: string) => {
+  const { data } = await mockApi.get<Infos>(`/campers/${id}`);
+  return data
+}

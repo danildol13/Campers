@@ -1,8 +1,9 @@
-import { mockApi } from "@/app/api/externalApi";
+import BookingForm from "@/Components/BookingForm/BookingForm";
 import CamperDetails from "@/Components/CamperDetails/CamperDetails";
 import Container from "@/Components/shared/Container/Container";
-import { Infos } from "@/types/camper";
 import Image from "next/image";
+import css from "./oneCamperPage.module.css";
+import { getCamperById } from "@/services/filterServices";
 
 export default async function CatalogDetailsPage({
   params,
@@ -10,8 +11,7 @@ export default async function CatalogDetailsPage({
   params: { id: string };
 }) {
   const { id } = await params;
-
-  const { data } = await mockApi.get<Infos>(`/campers/${id}`);
+  const data = await getCamperById(id);
 
   return (
     <section>
@@ -46,7 +46,10 @@ export default async function CatalogDetailsPage({
           ))}
         </div>
         <p>{data.description}</p>
-        <CamperDetails camper={data} />
+        <div className={css.detailsLayout}>
+          <CamperDetails camper={data} />
+          <BookingForm />
+        </div>
       </Container>
     </section>
   );
