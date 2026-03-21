@@ -1,7 +1,14 @@
-.catalogSection{
-    padding: 48px 0 52px
+.catalogSection {
+  padding: 48px 0 52px;
 }
-.catalog{
-    display: grid;
-    grid-template-columns: 360px 1fr;
+.catalog {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 32px;
+}
+.camperContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+align-items: center;
 }

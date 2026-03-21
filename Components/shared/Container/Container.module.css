@@ -1,0 +1,7 @@
+.container { margin: 0 auto; }
+.sm { max-width: 320px; }
+.md { max-width: 480px; }
+.lg { max-width: 768px; }
+.xl { max-width: 1024px; }
+.xxl { max-width: 1280px; }
+.fluid { max-width: 100%; }

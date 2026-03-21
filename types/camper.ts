@@ -1,8 +1,10 @@
+// API Response
 export interface ApiResponse {
   total: number;
   items: Infos[];
 }
 
+// Camper data
 export interface Gallery {
   thumb: string;
   original: string;
@@ -15,17 +17,17 @@ interface Reviews {
 }
 
 export interface Infos {
-  id: number;
+  id: string;
   name: string;
   price: number;
   rating: number;
   location: string;
   description: string;
-  form: VehicleType;
+  form: VehicleTypes;
   length: string;
   width: string;
   height: string;
-  tank: number;
+  tank: string;
   consumption: string;
   transmission: string;
   engine: string;
@@ -42,10 +44,7 @@ export interface Infos {
   reviews: Reviews[];
 }
 
-
-
-
-
+// Filter types
 export type CityType =
   | "Ukraine, Kyiv"
   | "Ukraine, Poltava"
@@ -55,8 +54,38 @@ export type CityType =
   | "Ukraine, Sumy"
   | "Ukraine, Lviv";
 
-export type EquipmentType = "AC" | "kitchen" | "bathroom" | "TV";
+export type EquipmentType = "AC" | "kitchen" | "bathroom" | "TV" | "automatic";
 
-export type VehicleType = "panelTruck" | "fullyIntegrated" | "alcove";
+export type VehicleTypes = "panelTruck" | "fullyIntegrated" | "alcove";
 
 export type TransmissionType = "automatic";
+
+export type SelectableValue = EquipmentType | VehicleTypes;
+
+export interface Filters {
+  city?: CityType | "";
+  equipment?: EquipmentType[];
+  type?: VehicleTypes | "";
+}
+
+// Constants
+export const firstCategories = [
+  "AC",
+  "kitchen",
+  "TV",
+  "bathroom",
+  "radio",
+  "refrigerator",
+  "microwave",
+  "gas",
+  "water",
+] as const;
+
+export const vehicleDetails = [
+  "form",
+  "length",
+  "width",
+  "height",
+  "tank",
+  "consumption",
+] as const;

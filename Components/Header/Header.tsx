@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import Container from "../Container/Container";
+import Container from "../shared/Container/Container";
 import css from "./Header.module.css";
 import { usePathname } from "next/navigation";
 
@@ -11,10 +11,9 @@ export default function Header() {
       <Container className={css.headerContainer}>
         <Link href="/">
           <svg width={125} height={16}>
-            <use href="icons.svg#icon-Logo"></use>
+            <use href="/allicons.svg#icon-Logo"></use>
           </svg>
         </Link>
-
         <nav>
           <ul className={css.navigation}>
             <li>

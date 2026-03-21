@@ -1,6 +1,6 @@
 import Link from "next/link";
 import css from "./page.module.css";
-import Container from "@/Components/Container/Container";
+import Container from "@/Components/shared/Container/Container";
 
 export default async function Home() {
   return (

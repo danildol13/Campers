@@ -1,0 +1,58 @@
+.equipmentContainer {
+  margin-bottom: 32px;
+}
+.vehicleTitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main);
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--gray-light);
+  padding-bottom: 24px;
+}
+.checkboxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  user-select: none;
+}
+.oneBox {
+  border: 1px solid var(--gray-light);
+  border-radius: 12px;
+  width: 112px;
+  height: 96px;
+  padding: 16px 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    transform 0.2s ease,
+    border-color 0.4s ease;
+}
+.oneBox:has(input:checked) {
+  border-color: red;
+}
+.oneBox:hover {
+  transform: scale(1.05);
+}
+.input {
+  appearance: none;
+}
+.equipmentCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.equipmentName {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--main);
+}

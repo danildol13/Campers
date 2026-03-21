@@ -1,9 +1,10 @@
+import { ReactNode } from "react";
 import css from "./Container.module.css";
 
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
   size?: "sm" | "md" | "lg" | "xl" | "xxl" | "fluid";
-  className?: string
+  className?: string;
 }
 
 export default function Container({ children, size = "xxl", className }: Props) {

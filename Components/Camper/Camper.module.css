@@ -1,0 +1,71 @@
+.camper {
+  display: flex;
+  padding: 24px;
+  border: 1px solid var(--gray-light);
+  border-radius: 12px;
+  gap: 24px;
+}
+.pictureContainer img {
+  object-fit: cover;
+  border-radius: 10px;
+  object-position: 72%;
+}
+
+.upperContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: var(--main);
+}
+.priceContainer {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.price {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: var(--main);
+}
+.liked use {
+  fill: red;
+}
+.normal use {
+  fill: black;
+}
+.priceContainer svg {
+  cursor: pointer;
+}
+.infosContainer {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.firstPart {
+  display: flex;
+  gap: 4px;
+}
+.secondPart {
+  display: flex;
+}
+.description {
+  white-space: nowrap;
+  width: 498px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text);
+  margin-bottom: 24px;
+}

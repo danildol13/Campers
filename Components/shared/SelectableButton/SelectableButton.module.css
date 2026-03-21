@@ -1,0 +1,13 @@
+.label { display: flex; flex-direction: column; justify-content: center; align-items: center; border: 1px solid var(--gray-light); border-radius: 12px; cursor: pointer; transition: transform 0.2s ease, border-color 0.4s ease; user-select: none; }
+.label:hover { transform: scale(1.05); }
+.label:has(input:checked) { border-color: var(--button); }
+.input { appearance: none; }
+.contentContainer { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.van-padding { padding: 16px 40px; width: 112px; height: 96px; }
+.fullyIntegrated-padding { padding: 4px 16px; width: 112px; height: 96px; }
+.alcove-padding { padding: 16px 30px; width: 112px; height: 96px; }
+.ac-padding { padding: 16px 40px; width: 112px; height: 96px; }
+.automatic-padding { padding: 16px; width: 112px; height: 96px; }
+.kitchen-padding { padding: 16px 26px; width: 112px; height: 96px; }
+.tv-padding { padding: 16px 40px; width: 112px; height: 96px; }
+.bathroom-padding { padding: 16px 18px; width: 112px; height: 96px; }

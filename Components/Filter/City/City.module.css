@@ -1,3 +1,4 @@
-.input{
-    background-color: orange;
-}
+.cityContainer { display: flex; flex-direction: column; gap: 8px; margin-bottom: 40px; }
+.cityTitle { font-family: var(--font-family); font-weight: 400; font-size: 16px; line-height: 150%; color: var(--gray); }
+.innerContainer { display: flex; gap: 8px; padding: 16px 0 16px 20px; background-color: var(--inputs); border-radius: 12px; }
+.inputCity { background-color: var(--inputs); }
