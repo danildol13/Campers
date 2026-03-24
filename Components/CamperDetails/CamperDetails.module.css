@@ -1,7 +1,7 @@
 .switchButtons {
   display: flex;
   gap: 40px;
-  border-bottom: 3px solid var(--gray-light);
+  border-bottom: 1px solid var(--gray-light);
   position: relative;
   width: 100%;
 }
@@ -18,7 +18,7 @@
 
 .activeLine {
   position: absolute;
-  bottom: -3px;
+  bottom: -2px;
   height: 3px;
   background: var(--button);
   transition:
@@ -29,4 +29,5 @@
 .lowerTab{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 40px;
 }

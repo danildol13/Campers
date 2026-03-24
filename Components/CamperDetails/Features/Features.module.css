@@ -1,0 +1,60 @@
+.featuresCard{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 44px 52px;
+    background: var(--inputs);
+    border-radius: 10px;
+    margin-top: 44px;
+}
+
+.categoriesCard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.categories {
+  display: inline-flex;
+  gap: 8px;
+  background: var(--badges);
+  mix-blend-mode: multiply;
+  padding: 12px 18px;
+  border-radius: 100px;
+}
+
+.categoryName {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--main);
+}
+
+.detailsBlock{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.detailsTitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main);
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.oneDetail{
+    display: flex;
+    justify-content:space-between;
+}
