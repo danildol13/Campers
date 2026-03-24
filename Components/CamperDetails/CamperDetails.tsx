@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Features from "./Features/Features";
 import Reviews from "./Reviews/Reviews";
 import css from "./CamperDetails.module.css";
+import BookingForm from "../BookingForm/BookingForm";
 
 interface Props {
   camper: Infos;
@@ -48,8 +49,13 @@ export default function CamperDetails({ camper }: Props) {
         />
       </div>
 
-      {activateTab === "features" && <Features camper={camper} />}
-      {activateTab === "reviews" && <Reviews camper={camper} />}
+      <div className={css.lowerTab}>
+        <div>
+          {activateTab === "features" && <Features camper={camper} />}
+          {activateTab === "reviews" && <Reviews camper={camper} />}
+        </div>
+        <BookingForm />
+      </div>
     </div>
   );
 }

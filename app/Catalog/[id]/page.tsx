@@ -1,4 +1,3 @@
-import BookingForm from "@/Components/BookingForm/BookingForm";
 import CamperDetails from "@/Components/CamperDetails/CamperDetails";
 import Container from "@/Components/shared/Container/Container";
 import Image from "next/image";
@@ -47,10 +46,7 @@ export default async function CatalogDetailsPage({
           ))}
         </div>
         <p className={css.description}>{data.description}</p>
-        <div className={css.detailsLayout}>
-          <CamperDetails camper={data} />
-          <BookingForm />
-        </div>
+        <CamperDetails camper={data} />
       </Container>
     </section>
   );

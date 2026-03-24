@@ -60,10 +60,3 @@
   color: var(--text);
   margin-bottom: 60px;
 }
-/* detailsLayout */
-
-.detailsLayout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
