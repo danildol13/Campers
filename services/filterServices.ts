@@ -44,5 +44,6 @@ export const getCampers = async (
 
 export const getCamperById = async (id: string) => {
   const { data } = await mockApi.get<Infos>(`/campers/${id}`);
-  return data
+  if (!data) throw new Error(`Camper with id ${id} not found`);
+  return data;
 }

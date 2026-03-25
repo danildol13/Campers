@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 
 export default function Header() {
   const path = usePathname();
+  const isActive = (href: string) =>
+    path === href ? css.active : css.inactive;
   return (
     <section className={css.headerSection}>
       <Container className={css.headerContainer}>
@@ -17,18 +19,12 @@ export default function Header() {
         <nav>
           <ul className={css.navigation}>
             <li>
-              <Link
-                href="/"
-                className={path === "/" ? css.active : css.inactive}
-              >
+              <Link href="/" className={isActive("/")}>
                 Home
               </Link>
             </li>
             <li>
-              <Link
-                href="/catalog"
-                className={path === "/catalog" ? css.active : css.inactive}
-              >
+              <Link href="/catalog" className={isActive("/catalog")}>
                 Catalog
               </Link>
             </li>

@@ -32,7 +32,7 @@ export default function Features({ camper }: Props) {
           {vehicleDetails.map((key) => (
             <div className={css.oneDetail} key={key}>
               <span>{`${key[0].toUpperCase()}${key.slice(1)}`}</span>
-              <span>{`${camper[key][0].toUpperCase()}${camper[key].slice(1)}`}</span>
+              <span>{`${String(camper[key][0].toUpperCase())}${String(camper[key].slice(1))}`}</span>
             </div>
           ))}
         </div>

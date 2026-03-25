@@ -16,6 +16,11 @@ export default function CamperDetails({ camper }: Props) {
   const featuresRef = useRef<HTMLButtonElement>(null);
   const reviewsRef = useRef<HTMLButtonElement>(null);
 
+  const tabs = {
+    features: <Features camper={camper} />,
+    reviews: <Reviews camper={camper} />,
+  };
+
   useEffect(() => {
     const activeRef = activateTab === "features" ? featuresRef : reviewsRef;
     if (activeRef.current) {
@@ -50,10 +55,7 @@ export default function CamperDetails({ camper }: Props) {
       </div>
 
       <div className={css.lowerTab}>
-        <div>
-          {activateTab === "features" && <Features camper={camper} />}
-          {activateTab === "reviews" && <Reviews camper={camper} />}
-        </div>
+        <div>{tabs[activateTab as keyof typeof tabs]}</div>
         <BookingForm />
       </div>
     </div>

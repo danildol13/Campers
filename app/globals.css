@@ -9,14 +9,6 @@
   --button: #e44848;
   --button-hover: #d84343;
   --rating: #ffc531;
-  --ac-padding: 16px 40px;
-  --automatic-padding: 16px;
-  --kitchen-padding: 16px 26px;
-  --tv-padding: 16px 40px;
-  --bathroom-padding: 16px 18px;
-  --van-padding: 16px 40px;
-  --fullyIntegrated-padding: 4px 16px;
-  --alcove-padding: 16px 30px;
 }
 :root {
   --font-family: "Inter", sans-serif;
@@ -70,3 +62,42 @@ picture,
 svg {
   display: block;
 }
+
+/* data picker  */
+.react-datepicker {
+  border: 1px solid rgb(9, 57, 97) !important;
+  border-radius: 5px !important;
+  font-family: var(--font-family) !important;
+  background-color: white;
+}
+
+.react-datepicker__header{
+  background-color: white !important;
+}
+
+.react-datepicker__day--selected {
+  background: var(--text) !important;
+  border-radius: 50% !important;
+  color: white !important;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: var(--main) !important;
+  border-width: 1px 1px 0 0 !important;
+}
+
+.react-datepicker__day--keyboard-selected{
+background: var(--text) !important;
+border-radius: 50% !important;
+color: white !important;
+}
+
+.react-datepicker__day:hover {
+  border-radius: 50% !important;
+  background-color: var(--gray-light) !important;
+}
+
+.react-datepicker__triangle {
+  display: none !important;
+}
+

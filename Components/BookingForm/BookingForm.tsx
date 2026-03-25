@@ -1,21 +1,32 @@
 "use client";
+
+import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker";
 import Button from "../shared/Button/Button";
 import toast from "react-hot-toast";
 import css from "./BookingForm.module.css";
+import { useState } from "react";
 
 export default function BookingForm() {
+  const [date, setDate] = useState<Date | null>(null);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     toast.success("Booking confirmed!");
   };
   return (
-    <div>
-      <h2>Book your campervan now</h2>
-      <p>Stay connected! We are always ready to help you.</p>
+    <div className={css.formTab}>
+      <h2 className={css.formTitle}>Book your campervan now</h2>
+      <p className={css.formSubtitle}>Stay connected! We are always ready to help you.</p>
       <form onSubmit={handleSubmit} className={css.formSection}>
         <input type="text" name="name" placeholder="Name*" />
         <input type="email" name="email" placeholder="Email*" />
-        <input type="date" name="bookingDate" placeholder="" />
+        <DatePicker
+          selected={date}
+          onChange={(date: Date | null) => setDate(date)}
+          placeholderText="Booking date*"
+          popperPlacement="bottom-start"
+        />
         <textarea placeholder="Comment" name="comment"></textarea>
         <Button type="submit">Send</Button>
       </form>

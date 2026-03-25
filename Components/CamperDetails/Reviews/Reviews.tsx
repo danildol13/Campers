@@ -1,4 +1,5 @@
 import { Infos } from "@/types/camper";
+import css from "./Reviews.module.css";
 
 interface Props {
   camper: Infos;
@@ -6,19 +7,31 @@ interface Props {
 
 export default function Reviews({ camper }: Props) {
   return (
-    <div>
+    <div className={css.reviewSection}>
       {camper.reviews.map((review) => (
-        <div key={review.reviewer_name}>
-          {review.reviewer_name[0]}
-          <div>
-            {review.reviewer_name}
-            {[1, 2, 3, 4, 5].map((star) => (
-              <span key={star}>
-                {star <= review.reviewer_rating ? "★" : "☆"}
-              </span>
-            ))}
+        <div className={css.review} key={review.reviewer_name}>
+          <div className={css.upperInfos}>
+            <div className={css.name}>{review.reviewer_name[0]}</div>
+            <div className={css.nextToInfos}>
+              {review.reviewer_name}
+              <div className={css.stars}>
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <span key={star}>
+                    {star <= review.reviewer_rating ? (
+                      <svg width={16} height={16}>
+                        <use href="/allicons.svg#icon-Rating-colored"></use>
+                      </svg>
+                    ) : (
+                      <svg width={16} height={16}>
+                        <use href="/allicons.svg#icon-rating"></use>
+                      </svg>
+                    )}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
-          <p>{review.comment}</p>
+          <p className={css.comment}>{review.comment}</p>
         </div>
       ))}
     </div>

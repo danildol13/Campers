@@ -1,4 +1,55 @@
-.formSection{
-    display: flex;
-    flex-direction: column;
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.formTab {
+  padding: 44px 52px;
+  margin-top: 44px;
+  border: 1px solid var(--gray-light);
+  border-radius: 10px;
+}
+
+.formTitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main);
+  margin-bottom: 8px;
+}
+
+.formSubtitle {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--gray);
+  margin-bottom: 24px;
+}
+.formTab input {
+  width: 100%;
+  background-color: var(--inputs);
+  border-radius: 10px;
+  padding: 18px 0 18px 18px;
+}
+
+.formTab input::placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--gray);
+}
+
+.formTab textarea {
+  width: 100%;
+  background-color: var(--inputs);
+  border-radius: 10px;
+  padding: 18px 0 76px 18px;
+}
+
+.formTab button {
+margin: 10px auto 0;
 }
