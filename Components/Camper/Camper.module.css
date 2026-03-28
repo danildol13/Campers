@@ -36,14 +36,20 @@
   line-height: 133%;
   color: var(--main);
 }
+.liked,
+.normal {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
 .liked use {
   fill: red;
 }
 .normal use {
   fill: black;
-}
-.priceContainer svg {
-  cursor: pointer;
 }
 .infosContainer {
   display: flex;

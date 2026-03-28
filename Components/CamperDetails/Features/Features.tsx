@@ -5,6 +5,8 @@ interface Props {
   camper: Infos;
 }
 
+const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+
 export default function Features({ camper }: Props) {
   return (
     <div className={css.featuresCard}>
@@ -31,8 +33,8 @@ export default function Features({ camper }: Props) {
         <div className={css.details}>
           {vehicleDetails.map((key) => (
             <div className={css.oneDetail} key={key}>
-              <span>{`${key[0].toUpperCase()}${key.slice(1)}`}</span>
-              <span>{`${String(camper[key][0].toUpperCase())}${String(camper[key].slice(1))}`}</span>
+              <span>{capitalize(key)}</span>
+              <span>{capitalize(String(camper[key]))}</span>
             </div>
           ))}
         </div>

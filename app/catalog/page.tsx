@@ -14,10 +14,15 @@ export default function Catalog() {
   const setFilters = useCamperStore((state) => state.setFilters);
   const isLoading = useCamperStore((state) => state.isLoading);
   const hasMore = useCamperStore((state) => state.hasMore);
+  const reset = useCamperStore((state) => state.reset);
 
   useEffect(() => {
-    if (allCampers.length === 0) loadData();
-  }, [loadData, allCampers.length]);
+    if (allCampers.length === 0 && !isLoading) loadData();
+    return () => {
+      reset();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <section className={css.catalogSection}>

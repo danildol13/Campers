@@ -9,6 +9,7 @@ interface CamperStore {
   favorites: string[];
   setFilters: (newFilters: Filters) => void;
   loadData: () => Promise<void>;
+  reset: () => void;
   isLoading: boolean;
   error: string | null;
   page: number;
@@ -56,6 +57,15 @@ export const useCamperStore = create<CamperStore>()(
         }
       },
 
+      reset: () => {
+        set({
+          campers: [],
+          filters: { city: undefined, equipment: [], type: undefined },
+          page: 1,
+          hasMore: true,
+        });
+      },
+
       toggleFavorite: (id: string) => {
         const { favorites } = get();
         const isFavorite = favorites.includes(id);
@@ -70,7 +80,6 @@ export const useCamperStore = create<CamperStore>()(
       name: "camper-storage",
       partialize: (state) => ({
         favorites: state.favorites,
-        filters: state.filters,
       }),
     },
   ),

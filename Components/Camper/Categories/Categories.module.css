@@ -1,2 +1,2 @@
-.categoriesContainer { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.categoriesContainer { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; list-style: none; padding: 0; margin-top: 0; }
 .categories { border-radius: 100px; padding: 12px 18px; background: var(--badges); mix-blend-mode: multiply; display: flex; gap: 8px; }

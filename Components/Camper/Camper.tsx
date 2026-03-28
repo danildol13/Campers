@@ -11,8 +11,8 @@ interface CamperProp {
 }
 
 export default function Camper({ oneCamp }: CamperProp) {
-  const { favorites, toggleFavorite } = useCamperStore();
-  const isLiked = favorites.includes(oneCamp.id);
+  const isLiked = useCamperStore((state) => state.favorites.includes(oneCamp.id));
+  const toggleFavorite = useCamperStore((state) => state.toggleFavorite);
   return (
     <div className={css.camper}>
       <div className={css.pictureContainer}>
@@ -25,17 +25,18 @@ export default function Camper({ oneCamp }: CamperProp) {
       </div>
       <div className={css.rightSideContainer}>
         <div className={css.upperContainer}>
-          <p className={css.title}>{oneCamp.name}</p>
+          <h2 className={css.title}>{oneCamp.name}</h2>
           <div className={css.priceContainer}>
             <p className={css.price}>€{oneCamp.price.toFixed(2)}</p>
-            <svg
-              width={24}
-              height={21}
+            <button
+              type="button"
               onClick={() => toggleFavorite(oneCamp.id)}
               className={isLiked ? css.liked : css.normal}
             >
-              <use href="/allicons.svg#icon-heart"></use>
-            </svg>
+              <svg width={24} height={21}>
+                <use href="/allicons.svg#icon-heart"></use>
+              </svg>
+            </button>
           </div>
         </div>
         <div className={css.infosContainer}>

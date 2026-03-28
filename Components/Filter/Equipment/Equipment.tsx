@@ -2,7 +2,9 @@ import SelectableButton from "@/Components/shared/SelectableButton/SelectableBut
 import css from "./Equipment.module.css";
 import { equipmentOptions } from "@/types/selectableType";
 
-export default function Equipment() {
+interface Props { selectedValues: string[]; }
+
+export default function Equipment({ selectedValues }: Props) {
   return (
     <div className={css.equipmentContainer}>
       <p className={css.vehicleTitle}>Vehicle equipment</p>
@@ -14,6 +16,7 @@ export default function Equipment() {
             value={option.value}
             key={option.value}
             paddingXClass={option.paddingX}
+            defaultChecked={selectedValues.includes(option.value)}
           >
             <svg width={32} height={32}>
               <use href={`/allicons.svg#${option.icon}`} />

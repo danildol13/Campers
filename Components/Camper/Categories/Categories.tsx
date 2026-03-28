@@ -26,15 +26,15 @@ export default function Categories({ camp }: CategoriesProps) {
   ].filter((item) => item.value);
 
   return (
-    <div className={css.categoriesContainer}>
+    <ul className={css.categoriesContainer}>
       {equipment.map((item) => (
-        <span className={css.categories} key={item.key}>
+        <li className={css.categories} key={item.key}>
           <svg width={20} height={20}>
             <use href={`/allicons.svg#${iconMap[item.key] || item.key}`}></use>
           </svg>
           {item.key === "transmission" ? "automatic" : item.key}
-        </span>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
