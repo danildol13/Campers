@@ -12,6 +12,11 @@ const nextConfig: NextConfig = {
         hostname: 'ftp.goit.study',
         pathname: '/img/campers-test-task/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'ac.goit.global',
+        pathname: '/fullstack/career/campers/**',
+      },
     ],
   },
 };

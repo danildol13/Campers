@@ -42,6 +42,7 @@ export interface Infos {
   water: boolean;
   gallery: Gallery[];
   reviews: Reviews[];
+  totalReviews: number;
 }
 
 // Filter types
@@ -56,7 +57,11 @@ export type CityType =
 
 export type EquipmentType = "AC" | "kitchen" | "bathroom" | "TV" | "automatic";
 
-export type VehicleTypes = "panelTruck" | "fullyIntegrated" | "alcove";
+export type VehicleTypes =
+  | "panelTruck"
+  | "fullyIntegrated"
+  | "alcove"
+  | "semiIntegrated";
 
 export type TransmissionType = "automatic";
 

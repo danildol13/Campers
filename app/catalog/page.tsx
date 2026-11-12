@@ -15,6 +15,7 @@ export default function Catalog() {
   const isLoading = useCamperStore((state) => state.isLoading);
   const hasMore = useCamperStore((state) => state.hasMore);
   const reset = useCamperStore((state) => state.reset);
+  const error = useCamperStore((state) => state.error);
 
   useEffect(() => {
     if (allCampers.length === 0 && !isLoading) loadData();
@@ -32,6 +33,12 @@ export default function Catalog() {
             <Filter onFilterChange={setFilters} />
           </aside>
           <div className={css.camperContainer}>
+            {error && <p>{error}</p>}
+
+            {!error && !isLoading && allCampers.length === 0 && (
+              <p>No campers found.</p>
+            )}
+
             {allCampers.map((camper) => (
               <Camper oneCamp={camper} key={camper.id} />
             ))}

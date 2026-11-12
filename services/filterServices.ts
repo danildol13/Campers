@@ -1,4 +1,4 @@
-import { mockApi } from "@/app/api/externalApi";
+import { fetchCamperById } from "@/app/api/externalApi";
 import api from "../lib/api";
 import { Filters, Infos } from "../types/camper";
 
@@ -23,8 +23,8 @@ export const getCampers = async (filters: Filters, page = 1, limit = 4) => {
   return data;
 };
 
-export const getCamperById = async (id: string) => {
-  const { data } = await mockApi.get<Infos>(`/campers/${id}`);
+export const getCamperById = async (id: string): Promise<Infos> => {
+  const data = await fetchCamperById(id);
   if (!data) throw new Error(`Camper with id ${id} not found`);
   return data;
 };

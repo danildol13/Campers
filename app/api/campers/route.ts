@@ -1,6 +1,6 @@
 import { NextResponse, NextRequest } from "next/server";
-import { mockApi } from "../externalApi";
-import { ApiResponse, Infos, EquipmentType } from "@/types/camper";
+import { fetchAllCampers } from "../externalApi";
+import { Infos, EquipmentType } from "@/types/camper";
 
 const VALID_EQUIPMENT: EquipmentType[] = ["AC", "kitchen", "bathroom", "TV"];
 const VALID_TRANSMISSION = ["automatic"];
@@ -19,9 +19,18 @@ export async function GET(request: NextRequest) {
         VALID_TRANSMISSION.includes(eq),
     );
 
-  const { data } = await mockApi.get<ApiResponse>("/campers");
+  let items: Infos[];
+  try {
+    items = await fetchAllCampers();
+  } catch (error) {
+    console.error("Failed to fetch campers from external API:", error);
+    return NextResponse.json(
+      { message: "Failed to load campers" },
+      { status: 502 },
+    );
+  }
 
-  const filteredData = data.items.filter((item) => {
+  const filteredData = items.filter((item) => {
     const cityMatch = !city || item.location.includes(city);
     const typeMatch = !type || item.form === type;
     const equipmentMatch =

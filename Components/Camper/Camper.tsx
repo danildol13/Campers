@@ -45,7 +45,7 @@ export default function Camper({ oneCamp }: CamperProp) {
               <use href="/allicons.svg#icon-Rating-colored"></use>
             </svg>
             <p>
-              {oneCamp.rating}({oneCamp.reviews.length})
+              {oneCamp.rating}({oneCamp.totalReviews})
             </p>
           </div>
           <div className={css.secondPart}>
